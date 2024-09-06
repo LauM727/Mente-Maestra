@@ -11,14 +11,14 @@ const FormNames = ({ numParticipants, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(names); // Envía los nombres al componente padre
+    onSubmit(names);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       {names.map((name, index) => (
         <div key={index}>
-          <label htmlFor={`participant-${index}`}>Nombre del participante {index + 1}:</label>
+          <label htmlFor={`participant-${index}`}>Participante {index + 1}:</label>
           <input
             type="text"
             id={`participant-${index}`}

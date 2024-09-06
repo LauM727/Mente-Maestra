@@ -10,8 +10,8 @@ const FormParticipants = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (participants && !isNaN(participants)) {
-      onSubmit(Number(participants)); // Llama a la función de callback con la cantidad de participantes
-      setParticipants(''); // Limpiar el campo de entrada después del envío
+      onSubmit(Number(participants));
+      setParticipants('');
     } else {
       alert('Por favor ingrese un número válido.');
     }
@@ -19,7 +19,7 @@ const FormParticipants = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="participants">Cantidad de participantes:</label>
+
       <input
         type="text"
         id="participants"

@@ -1,0 +1,29 @@
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: red;
+    transition: width 1s linear;
+}
+
+.timer-text {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
