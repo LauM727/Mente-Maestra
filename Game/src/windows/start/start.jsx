@@ -9,7 +9,7 @@ function Start (){
 
      useEffect(() => {
         const timer = setTimeout(() => {
-            navigate('/scanner');
+            navigate('/addParticipants');
         }, 3000);
 
         return () => clearTimeout(timer);
