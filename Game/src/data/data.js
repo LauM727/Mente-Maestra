@@ -129,6 +129,16 @@ const questionsData = {
             questionText: "Baila sin música durante 1 minuto.",
             options: ["Listo", "No puedo"],
             correctAnswer: "Listo"
+        },
+        {
+            questionText:"Todos los miembros del grupo deben formar una pirámide humana en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText:"El grupo debe organizarse en orden de estatura, de menor a mayor, en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         }
     ]
 };
