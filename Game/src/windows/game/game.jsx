@@ -146,7 +146,7 @@ function Game() {
     }, [stealPlayerIndex, incorrectQuestion]);
 
     if (gameOver) {
-        return <h1>¡{participants[currentPlayerIndex]} ha ganado el juego!</h1>;
+        return <h1>¡{participants[currentPlayerIndex]} ha ganado!</h1>;
     }
 
     return (

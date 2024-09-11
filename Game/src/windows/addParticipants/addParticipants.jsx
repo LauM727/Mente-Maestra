@@ -15,7 +15,7 @@ function AddParticipants() {
     return (
         <div className="add-person">
             <img className="logo" src={Logo} alt="Logo" />
-            <h1>Ingresa el número de participantes</h1>
+            <h1>Ingresa el número de jugadores</h1>
             <FormParticipants onSubmit={handleParticipantsSubmit} />
         </div>
     );
