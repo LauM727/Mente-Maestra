@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Questions from '../../components/questions/questions';
 import CategorySelection from '../../components/category/category';
 import TimerBar from '../../components/timeBar/timeBar';
+import questionsData from '../../data/data';
 
 function Game() {
     const location = useLocation();
@@ -11,6 +12,8 @@ function Game() {
     if (!participants || participants.length === 0) {
         return <h1>Error: No se encontraron participantes.</h1>;
     }
+
+    const WINNING_SCORE = 50;
 
     const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
     const [scores, setScores] = useState(Array(participants.length).fill(0));
@@ -21,62 +24,96 @@ function Game() {
     const [stealPlayerIndex, setStealPlayerIndex] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(null);
     const [timeRemaining, setTimeRemaining] = useState(30);
+    const [incorrectQuestion, setIncorrectQuestion] = useState(null);
 
     const handleCategorySelection = (category) => {
         setCategorySelected(category);
         setQuestionValue(10);
 
-
-        const question = { text: "¿Cuál es la capital de Francia?", correctAnswer: "correcto" };
-        setCurrentQuestion(question);
+        if (category && questionsData[category] && questionsData[category].length > 0) {
+            const categoryQuestions = questionsData[category];
+            const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
+            setCurrentQuestion(randomQuestion);
+        } else {
+            console.error(`No hay preguntas disponibles para la categoría ${category}`);
+            setCurrentQuestion(null);
+        }
 
         const randomPoints = Math.floor(Math.random() * 6) + 5;
         setQuestionValue(randomPoints);
     };
 
+    const checkForWinner = (scores) => {
+        return scores.some(score => score >= WINNING_SCORE);
+    };
+
     const handleAnswer = (answer) => {
         let newScores = [...scores];
+    
         if (categorySelected === "Retos") {
             if (answer === currentQuestion.correctAnswer) {
                 newScores = newScores.map(score => score + questionValue);
             } else {
                 newScores = newScores.map(score => score - questionValue);
             }
-        } else {
-            if (answer.toLowerCase() === "correcto") {
-                newScores[currentPlayerIndex] += questionValue;
+            setScores(newScores);
+    
+            if (checkForWinner(newScores)) {
+                setGameOver(true);
             } else {
-                newScores[currentPlayerIndex] -= questionValue;
-                setStealAttempt(true);
-                setStealPlayerIndex(currentPlayerIndex);
-                return;
+                setCategorySelected(null);
+                setCurrentPlayerIndex((currentPlayerIndex + 1) % participants.length);
+                setTimeRemaining(30);
             }
+            return;
         }
-
+    
+        if (answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase()) {
+            newScores[currentPlayerIndex] += questionValue;
+        } else {
+            newScores[currentPlayerIndex] -= questionValue;
+            setIncorrectQuestion(currentQuestion);
+            setStealAttempt(true);
+            setStealPlayerIndex(currentPlayerIndex);
+            return;
+        }
+    
         setScores(newScores);
-        setCategorySelected(null);
-        setCurrentPlayerIndex((currentPlayerIndex + 1) % participants.length);
-        setTimeRemaining(30);
+    
+        if (checkForWinner(newScores)) {
+            setGameOver(true);
+        } else {
+            setCategorySelected(null);
+            setCurrentPlayerIndex((currentPlayerIndex + 1) % participants.length);
+            setTimeRemaining(30);
+        }
     };
-
-    const handleStealAnswer = (playerIndex, isCorrect) => {
+    
+    const handleStealAnswer = (playerIndex, answer) => {
         let newScores = [...scores];
-        if (isCorrect) {
+        const normalizedAnswer = (answer || '').trim().toLowerCase();
+        const correctAnswer = (incorrectQuestion?.correctAnswer || '').trim().toLowerCase();
+    
+        if (normalizedAnswer === correctAnswer) {
             newScores[playerIndex] += questionValue;
         } else {
             newScores[playerIndex] -= questionValue * 2;
         }
-
+    
         setScores(newScores);
-        setStealAttempt(false);
-        setStealPlayerIndex(null);
-        setCategorySelected(null);
-        setCurrentPlayerIndex((prevIndex) => (prevIndex + 1) % participants.length);
-        setTimeRemaining(30);
-    };
+    
+        if (checkForWinner(newScores)) {
+            setGameOver(true);
+        } else {
+            setStealAttempt(false);
+            setStealPlayerIndex(null);
+            setCategorySelected(null);
+            setCurrentPlayerIndex((prevIndex) => (prevIndex + 1) % participants.length);
+            setTimeRemaining(30);
+        }
+    }; 
 
     const handleStealAttempt = (playerIndex) => {
-
         setStealPlayerIndex(playerIndex);
         setStealAttempt(false);
     };
@@ -103,10 +140,10 @@ function Game() {
     }, [stealAttempt]);
 
     useEffect(() => {
-        if (stealPlayerIndex !== null && currentQuestion) {
-            setCurrentQuestion(prevQuestion => ({ ...prevQuestion }));
+        if (stealPlayerIndex !== null && incorrectQuestion) {
+            setCurrentQuestion(incorrectQuestion);
         }
-    }, [stealPlayerIndex]);
+    }, [stealPlayerIndex, incorrectQuestion]);
 
     if (gameOver) {
         return <h1>¡{participants[currentPlayerIndex]} ha ganado el juego!</h1>;
@@ -145,9 +182,16 @@ function Game() {
                             <Questions
                                 category={categorySelected}
                                 question={currentQuestion}
-                                onAnswer={stealPlayerIndex === null ? handleAnswer : (answer) => handleStealAnswer(stealPlayerIndex, answer.toLowerCase() === "correcto")}
+                                onAnswer={(answer) => {
+                                    if (stealPlayerIndex === null) {
+                                        handleAnswer(answer);
+                                    } else {
+                                        handleStealAnswer(stealPlayerIndex, answer);
+                                    }
+                                }}
                                 questionValue={questionValue}
                             />
+
                         </>
                     ) : (
                         <CategorySelection onSelectCategory={handleCategorySelection} />

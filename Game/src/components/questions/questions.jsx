@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import questionsData from '../../data/data';
 
-function Questions({ category, onAnswer }) {
+function Questions({ category, question: propQuestion, onAnswer }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
-    const [question, setQuestion] = useState(null);
+    const [question, setQuestion] = useState(propQuestion);
 
     useEffect(() => {
-        if (questionsData[category]) {
-
+        if (propQuestion) {
+            setQuestion(propQuestion);
+        } else if (category && questionsData[category] && questionsData[category].length > 0) {
             const categoryQuestions = questionsData[category];
-
-
             const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
             setQuestion(randomQuestion);
+        } else {
+            console.error(`No hay preguntas disponibles para la categoría ${category}`);
         }
-    }, [category]);
+    }, [category, propQuestion]);
 
     const handleOptionChange = (e) => {
         setSelectedAnswer(e.target.value);
@@ -22,15 +23,12 @@ function Questions({ category, onAnswer }) {
 
     const handleSubmit = () => {
         if (selectedAnswer) {
-            if (selectedAnswer === question.correctAnswer) {
-                onAnswer("correcto");
-            } else {
-                onAnswer("incorrecto");
-            }
+            onAnswer(selectedAnswer);
         }
     };
+    
 
-    if (!question) return <div>Cargando pregunta...</div>;
+    if (!question || !question.options) return <div>Cargando pregunta...</div>;
 
     return (
         <div>
