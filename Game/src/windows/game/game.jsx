@@ -26,28 +26,37 @@ function Game() {
         setCategorySelected(category);
         setQuestionValue(10);
 
+
         const question = { text: "¿Cuál es la capital de Francia?", correctAnswer: "correcto" };
         setCurrentQuestion(question);
 
-        const randomPoints = Math.floor(Math.random() * 16) + 5;
+        const randomPoints = Math.floor(Math.random() * 6) + 5;
         setQuestionValue(randomPoints);
     };
 
     const handleAnswer = (answer) => {
         let newScores = [...scores];
-
-        if (answer.toLowerCase() === "correcto") {
-            newScores[currentPlayerIndex] += questionValue;
-            setScores(newScores);
-            setCategorySelected(null);
-            setCurrentPlayerIndex((currentPlayerIndex + 1) % participants.length);
-            setTimeRemaining(30);
+        if (categorySelected === "Retos") {
+            if (answer === currentQuestion.correctAnswer) {
+                newScores = newScores.map(score => score + questionValue);
+            } else {
+                newScores = newScores.map(score => score - questionValue);
+            }
         } else {
-            newScores[currentPlayerIndex] -= questionValue;
-            setScores(newScores);
-            setStealAttempt(true);
-            setStealPlayerIndex(currentPlayerIndex);
+            if (answer.toLowerCase() === "correcto") {
+                newScores[currentPlayerIndex] += questionValue;
+            } else {
+                newScores[currentPlayerIndex] -= questionValue;
+                setStealAttempt(true);
+                setStealPlayerIndex(currentPlayerIndex);
+                return;
+            }
         }
+
+        setScores(newScores);
+        setCategorySelected(null);
+        setCurrentPlayerIndex((currentPlayerIndex + 1) % participants.length);
+        setTimeRemaining(30);
     };
 
     const handleStealAnswer = (playerIndex, isCorrect) => {
@@ -88,7 +97,6 @@ function Game() {
     }, [timeRemaining, gameOver]);
 
     useEffect(() => {
-
         if (stealAttempt) {
             setTimeRemaining(30);
         }
