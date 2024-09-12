@@ -4,13 +4,15 @@ import Questions from '../../components/questions/questions';
 import CategorySelection from '../../components/category/category';
 import TimerBar from '../../components/timeBar/timeBar';
 import questionsData from '../../data/data';
+import addP from '../../assets/addP.png';
+import "./game.css";
 
 function Game() {
     const location = useLocation();
     const { participants } = location.state || {};
 
     if (!participants || participants.length === 0) {
-        return <h1>Error: No se encontraron participantes.</h1>;
+        return <h1 className='error'>Error: No se encontraron participantes.</h1>;
     }
 
     const WINNING_SCORE = 50;
@@ -150,7 +152,8 @@ function Game() {
     }
 
     return (
-        <div className="game-screen">
+        <div className="game-screen"
+            style={{ backgroundImage: `url(${addP})`, backgroundSize: 'cover' }}>
             <h1>Turno de {participants[currentPlayerIndex]}</h1>
 
             {stealAttempt ? (
@@ -199,14 +202,16 @@ function Game() {
                 </>
             )}
 
-            <div className="scoreboard">
-                <h2>Puntajes</h2>
-                {participants.map((player, index) => (
-                    <div key={index}>
-                        <p>{player}: {scores[index]} puntos</p>
+            {!categorySelected && stealPlayerIndex === null && (
+                <div className="scoreboard">
+                    <h2>Puntajes</h2>
+                    {participants.map((player, index) => (
+                        <div key={index}>
+                            <p>{player}: {scores[index]} puntos</p>
+                        </div>
+                    ))}
                     </div>
-                ))}
-            </div>
+            )}
         </div>
     );
 }

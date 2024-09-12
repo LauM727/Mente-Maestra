@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './formParticipants.css'
 
 const FormParticipants = ({ onSubmit }) => {
   const [participants, setParticipants] = useState('');
@@ -27,7 +28,7 @@ const FormParticipants = ({ onSubmit }) => {
         onChange={handleChange}
         placeholder="Ingrese un número"
       />
-      <button type="submit">Enviar</button>
+      <button className="submit-btn" type="submit">Enviar</button>
     </form>
   );
 };

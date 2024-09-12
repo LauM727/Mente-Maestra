@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
 import Logoimg from "../../assets/logoimg.png";
+import "./begin.css";
+import addP from '../../assets/addP.png';
 
 function Begin() {
     const navigate = useNavigate();
@@ -16,9 +18,11 @@ function Begin() {
     }, [navigate, participantNames]);
 
     return (
-        <div className="begin-screen">
+        <div className="beginWindow" style={{ backgroundImage: `url(${addP})`, backgroundSize: 'cover' }}>
+            <div className="begin-screen">
             <img className="logo" src={Logoimg} alt="Logo" />
             <h2>¡Comencemos!</h2>
+            </div>
         </div>
     );
 }

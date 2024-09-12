@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FormNames from '../../components/forms/formNames';
 import Logo from '../../assets/logo.png';
+import addP from '../../assets/addP.png';
+import "./addNames.css";
 
 function AddNames() {
     const location = useLocation();
@@ -17,7 +19,11 @@ function AddNames() {
     };
 
     return (
-        <div className="add-names">
+        <div 
+            className="addPWindow"
+            style={{ backgroundImage: `url(${addP})`, backgroundSize: 'cover' }}
+        >
+            <div className="add-names">
             <img className="logo" src={Logo} alt="Logo" />
             <h1>Ingresa los nombres de los {numParticipants} participantes</h1>
             {!namesSubmitted ? (
@@ -32,6 +38,7 @@ function AddNames() {
                     </ul>
                 </div>
             )}
+            </div>
         </div>
     );
 }

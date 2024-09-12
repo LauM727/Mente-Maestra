@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import questionsData from '../../data/data';
+import './questions.css'; // Asegúrate de crear este archivo CSS para el estilo específico de las preguntas.
 
 function Questions({ category, question: propQuestion, onAnswer }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -8,12 +8,6 @@ function Questions({ category, question: propQuestion, onAnswer }) {
     useEffect(() => {
         if (propQuestion) {
             setQuestion(propQuestion);
-        } else if (category && questionsData[category] && questionsData[category].length > 0) {
-            const categoryQuestions = questionsData[category];
-            const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
-            setQuestion(randomQuestion);
-        } else {
-            console.error(`No hay preguntas disponibles para la categoría ${category}`);
         }
     }, [category, propQuestion]);
 
@@ -26,16 +20,16 @@ function Questions({ category, question: propQuestion, onAnswer }) {
             onAnswer(selectedAnswer);
         }
     };
-    
 
     if (!question || !question.options) return <div>Cargando pregunta...</div>;
 
     return (
-        <div>
-            <h2>{question.questionText}</h2>
-            <form>
+        <div className="question-container">
+            <div className="points">6 puntos</div>
+            <h2 className="question-text">{question.questionText}</h2>
+            <form className="options-form">
                 {question.options.map((option, index) => (
-                    <div key={index}>
+                    <div key={index} className="option-container">
                         <input
                             type="radio"
                             id={`option-${index}`}
@@ -43,11 +37,13 @@ function Questions({ category, question: propQuestion, onAnswer }) {
                             value={option}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option-${index}`}>{option}</label>
+                        <label htmlFor={`option-${index}`} className="option-label">
+                            {option}
+                        </label>
                     </div>
                 ))}
             </form>
-            <button onClick={handleSubmit} disabled={!selectedAnswer}>
+            <button onClick={handleSubmit} className="submit-button" disabled={!selectedAnswer}>
                 Enviar Respuesta
             </button>
         </div>

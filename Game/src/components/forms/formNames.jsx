@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './formNames.css';
 
 const FormNames = ({ numParticipants, onSubmit }) => {
   const [names, setNames] = useState(Array(numParticipants).fill(''));
@@ -29,7 +30,7 @@ const FormNames = ({ numParticipants, onSubmit }) => {
           />
         </div>
       ))}
-      <button type="submit">Enviar Nombres</button>
+      <button className="submit-btn" type="submit">Enviar Nombres</button>
     </form>
   );
 };
