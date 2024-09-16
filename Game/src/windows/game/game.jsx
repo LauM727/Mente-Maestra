@@ -125,15 +125,26 @@ function Game() {
     };
 
     useEffect(() => {
-        if (timeRemaining > 0 && !gameOver) {
+        if (timeRemaining > 0 && !gameOver && categorySelected && !stealAttempt) {
             const timer = setInterval(() => {
                 setTimeRemaining((prevTime) => prevTime - 1);
             }, 1000);
             return () => clearInterval(timer);
-        } else if (timeRemaining === 0) {
+        } else if (timeRemaining === 0 && categorySelected && !stealAttempt) {
             handleTimeUp();
         }
-    }, [timeRemaining, gameOver]);
+    }, [timeRemaining, gameOver, categorySelected, stealAttempt]);
+
+    useEffect(() => {
+        if (stealAttempt && timeRemaining > 0 && !gameOver) {
+            const timer = setInterval(() => {
+                setTimeRemaining((prevTime) => prevTime - 1);
+            }, 1000);
+            return () => clearInterval(timer);
+        } else if (timeRemaining === 0 && stealAttempt) {
+            handleTimeUp();
+        }
+    }, [timeRemaining, gameOver, stealAttempt]);
 
     useEffect(() => {
         if (stealAttempt) {
