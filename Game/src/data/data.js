@@ -253,29 +253,29 @@ const questionsData = {
     ],
     "Retos": [
         {
-            questionText: "Haz 10 flexiones de brazos.",
-            options: ["Listo", "No puedo"],
-            correctAnswer: "Listo"
+            questionText: "Todos hagan 10 flexiones de brazos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         },
         {
-            questionText: "Di los nombres de cinco ciudades que empiecen con la letra B en 30 segundos.",
-            options: ["Listo", "No puedo"],
-            correctAnswer: "Listo"
+            questionText: "Digan los nombres de cinco ciudades que empiecen con la letra B en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         },
         {
-            questionText: "Di el abecedario al revés sin equivocarte.",
-            options: ["Listo", "No puedo"],
-            correctAnswer: "Listo"
+            questionText: "Digan el abecedario al revés sin equivocarse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         },
         {
-            questionText: "Imita a un animal durante 30 segundos.",
-            options: ["Listo", "No puedo"],
-            correctAnswer: "Listo"
+            questionText: "Imiten a un animal durante 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         },
         {
-            questionText: "Baila sin música durante 30 segundos.",
-            options: ["Listo", "No puedo"],
-            correctAnswer: "Listo"
+            questionText: "Bailen sin música durante 20 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
         },
         {
             questionText:"Todos los miembros del grupo deben formar una pirámide humana en 30 segundos.",

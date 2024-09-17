@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './questions.css'; // Asegúrate de crear este archivo CSS para el estilo específico de las preguntas.
+import './questions.css';
 
 function Questions({ category, question: propQuestion, onAnswer }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);

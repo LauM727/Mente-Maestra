@@ -15,7 +15,7 @@ function Game() {
         return <h1 className='error'>Error: No se encontraron participantes.</h1>;
     }
 
-    const WINNING_SCORE = 50;
+    const WINNING_SCORE = 100;
 
     const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
     const [scores, setScores] = useState(Array(participants.length).fill(0));

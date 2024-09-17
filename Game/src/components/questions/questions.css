@@ -1,5 +1,4 @@
-@media (min-width: 23.4375rem) { /* 375px a rem */
-    /* Contenedor de la pregunta */
+@media (min-width: 23.4375rem) {
     .question-container {
         background-color: #fff5f5;
         border-radius: 0.9rem;
@@ -10,7 +9,6 @@
         position: relative;
     }
 
-    /* Puntos en la parte superior */
     .points {
         background-color: #ffffff;
         padding: 0.3rem 0.6rem;
@@ -23,7 +21,6 @@
         color: #d32f2f;
     }
 
-    /* Pregunta */
     .question-text {
         font-size: 1rem;
         text-align: center;
@@ -31,7 +28,6 @@
         color: #333;
     }
 
-    /* Formulario de opciones */
     .options-form {
         display: flex;
         flex-direction: column;
@@ -50,7 +46,6 @@
         display: none;
     }
 
-    /* Estilo para la etiqueta de la opción */
     .option-label {
         display: block;
         color: #000;
@@ -67,7 +62,6 @@
         background-color: #ffcdd2;
     }
 
-    /* Estilo para opción seleccionada */
     .option-container input[type="radio"]:checked + .option-label {
         background-color: #ff5252;
         color: white;
