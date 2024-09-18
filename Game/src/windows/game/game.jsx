@@ -27,15 +27,27 @@ function Game() {
     const [currentQuestion, setCurrentQuestion] = useState(null);
     const [timeRemaining, setTimeRemaining] = useState(30);
     const [incorrectQuestion, setIncorrectQuestion] = useState(null);
+    const [usedQuestions, setUsedQuestions] = useState([]);
 
     const handleCategorySelection = (category) => {
         setCategorySelected(category);
         setQuestionValue(10);
 
         if (category && questionsData[category] && questionsData[category].length > 0) {
-            const categoryQuestions = questionsData[category];
-            const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
-            setCurrentQuestion(randomQuestion);
+
+            const categoryQuestions = questionsData[category].filter(
+                question => !usedQuestions.includes(question.questionText)
+            );
+
+            if (categoryQuestions.length > 0) {
+                const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
+                setCurrentQuestion(randomQuestion);
+
+                setUsedQuestions([...usedQuestions, randomQuestion.questionText]);
+            } else {
+                console.error(`No quedan más preguntas disponibles para la categoría ${category}`);
+                setCurrentQuestion(null);
+            }
         } else {
             console.error(`No hay preguntas disponibles para la categoría ${category}`);
             setCurrentQuestion(null);
@@ -51,7 +63,7 @@ function Game() {
 
     const handleAnswer = (answer) => {
         let newScores = [...scores];
-    
+
         if (categorySelected === "Retos") {
             if (answer === currentQuestion.correctAnswer) {
                 newScores = newScores.map(score => score + questionValue);
@@ -59,7 +71,7 @@ function Game() {
                 newScores = newScores.map(score => score - questionValue);
             }
             setScores(newScores);
-    
+
             if (checkForWinner(newScores)) {
                 setGameOver(true);
             } else {
@@ -69,7 +81,7 @@ function Game() {
             }
             return;
         }
-    
+
         if (answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase()) {
             newScores[currentPlayerIndex] += questionValue;
         } else {
@@ -79,9 +91,9 @@ function Game() {
             setStealPlayerIndex(currentPlayerIndex);
             return;
         }
-    
+
         setScores(newScores);
-    
+
         if (checkForWinner(newScores)) {
             setGameOver(true);
         } else {
@@ -90,20 +102,20 @@ function Game() {
             setTimeRemaining(30);
         }
     };
-    
+
     const handleStealAnswer = (playerIndex, answer) => {
         let newScores = [...scores];
         const normalizedAnswer = (answer || '').trim().toLowerCase();
         const correctAnswer = (incorrectQuestion?.correctAnswer || '').trim().toLowerCase();
-    
+
         if (normalizedAnswer === correctAnswer) {
             newScores[playerIndex] += questionValue;
         } else {
             newScores[playerIndex] -= questionValue * 2;
         }
-    
+
         setScores(newScores);
-    
+
         if (checkForWinner(newScores)) {
             setGameOver(true);
         } else {
@@ -113,7 +125,7 @@ function Game() {
             setCurrentPlayerIndex((prevIndex) => (prevIndex + 1) % participants.length);
             setTimeRemaining(30);
         }
-    }; 
+    };
 
     const handleStealAttempt = (playerIndex) => {
         setStealPlayerIndex(playerIndex);
