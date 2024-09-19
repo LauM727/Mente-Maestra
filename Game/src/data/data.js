@@ -18,7 +18,7 @@ const questionsData = {
         {
             questionText: "¿Cuál es el idioma más hablado en el mundo?",
             options: ["Inglés", "Mandarín", "Español", "Hindú"],
-            correctAnswer: "Mandarín"
+            correctAnswer: "Inglés"
         },
         {
             questionText: "¿Quién pintó 'La Última Cena'?",
@@ -44,7 +44,62 @@ const questionsData = {
             questionText: "¿Qué filósofo griego fue maestro de Alejandro Magno?",
             options: ["Sócrates", "Aristóteles", "Descartes", "Platón"],
             correctAnswer: "Aristóteles"
-        }
+        },
+        {
+            questionText: "¿Qué vitamina es producida por el cuerpo cuando está expuesto al sol?",
+            options: ["Vitamina A", "Vitamina C", "Vitamina D", "Vitamina E"],
+            correctAnswer: "Vitamina D"
+        },
+        {
+            questionText: "¿Cuál es el océano más grande del mundo?",
+            options: ["Océano Atlántico", "Océano Índico", "Océano Pacífico", "Océano Ártico"],
+            correctAnswer: "Océano Pacífico"
+        },
+        {
+            questionText: "¿Qué instrumento mide la presión atmosférica?",
+            options: ["Termómetro", "Barómetro", "Higrómetro", "Anemómetro"],
+            correctAnswer: "Barómetro"
+        },
+        {
+            questionText: "¿Cuál es el animal terrestre más rápido?",
+            options: ["Guepardo", "León", "Leopardo", "Caballo"],
+            correctAnswer: "Guepardo"
+        },
+        {
+            questionText: "¿Cuál es el país con mayor cantidad de islas?",
+            options: ["Indonesia", "Suecia", "Japón", "Filipinas"],
+            correctAnswer: "Suecia"
+        },
+        {
+            questionText: "¿Quien fue el autor que pintó la famosa noche estrellada?",
+            options: ["Claude Monet", "Pablo Picasso", "Salvador Dalí", "Vincent van Gogh"],
+            correctAnswer: "Vincent van Gogh"
+        },
+        {
+            questionText: "¿Cuál es el libro más vendido de todos los tiempos después de la Biblia?",
+            options: ["Don Quijote de la Mancha", "Harry Potter", "El Señor de los Anillos", "Cien años de soledad"],
+            correctAnswer: "Don Quijote de la Mancha"
+        },
+        {
+            questionText: "¿Cuál es el metal más abundante en la corteza terrestre?",
+            options: ["Hierro", "Aluminio", "Oro", "Cobre"],
+            correctAnswer: "Aluminio"
+        },
+        {
+            questionText: "¿Qué tipo de animal es la ballena?",
+            options: ["Pez", "Reptil", "Mamífero", "Anfibio"],
+            correctAnswer: "Mamífero"
+        },
+        {
+            questionText: "¿Quién desarrolló la teoría de la relatividad?",
+            options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Niels Bohr"],
+            correctAnswer: "Albert Einstein"
+        },
+        {
+            questionText: "¿Qué instrumento mide la intensidad de los terremotos?",
+            options: ["Termómetro", "Barómetro", "Telescopio", "Sismógrafo"],
+            correctAnswer: "Sismógrafo"
+        },
     ],
     "Deporte": [
         {
@@ -91,8 +146,62 @@ const questionsData = {
             questionText: "¿Cuál es el deporte que se practica con una pelota y una raqueta en una cancha dividida por una red?",
             options: ["Badminton", "Ping Pong", "Voleibol", "Tenis"],
             correctAnswer: "Tenis"
-        }
-
+        },
+        {
+            questionText: "¿En qué deporte se utiliza una red y un volante?",
+            options: ["Bádminton", "Voleibol", "Tenis", "Squash"],
+            correctAnswer: "Bádminton"
+        },
+        {
+            questionText: "¿Cuántos jugadores conforman un equipo de fútbol americano en el campo?",
+            options: ["9", "10", "11", "12"],
+            correctAnswer: "12"
+        },
+        {
+            questionText: "¿Quién es el máximo goleador en la historia de los mundiales de fútbol?",
+            options: ["Pelé", "Lionel Messi", "Miroslav Klose", "Cristiano Ronaldo"],
+            correctAnswer: "Miroslav Klose"
+        },
+        {
+            questionText: "¿En qué ciudad se celebraron los Juegos Olímpicos de 1992?",
+            options: ["Los Ángeles", "Seúl", "Barcelona", "Atlanta"],
+            correctAnswer: "Barcelona"
+        },
+        {
+            questionText: "¿Cuál es el deporte más popular en la India?",
+            options: ["Críquet", "Fútbol", "Hockey sobre césped", "Bádminton"],
+            correctAnswer: "Críquet"
+        },
+        {
+            questionText: "¿En qué deporte se pueden obtener puntos mediante tries?",
+            options: ["Rugby", "Balonmano", "Fútbol americano", "Waterpolo"],
+            correctAnswer: "Rugby"
+        },
+        {
+            questionText: "¿Qué tenista ha ganado más títulos de Grand Slam en la historia?",
+            options: ["Roger Federer", "Rafael Nadal", "Novak Djokovic", "Pete Sampras"],
+            correctAnswer: "Novak Djokovic"
+        },
+        {
+            questionText: "¿En qué país se originó el judo?",
+            options: ["China", "Japón", "Corea del Sur", "Tailandia"],
+            correctAnswer: "Japón"
+        },
+        {
+            questionText: "¿Qué ciclista colombiano ha ganado el Tour de Francia?",
+            options: ["Rigoberto Urán", "Nairo Quintana", "Egan Bernal", "Fernando Gaviria"],
+            correctAnswer: "Egan Bernal"
+        },
+        {
+            questionText: "¿En qué deporte se utiliza un sable?",
+            options: ["Esgrima", "Judo", "Kárate", "Taekwondo"],
+            correctAnswer: "Esgrima"
+        },
+        {
+            questionText: "¿Cuál es el país de origen del tenis de mesa?",
+            options: ["China", "Japón", "Corea del Sur", "Francia"],
+            correctAnswer: "China"
+        },
     ],
     "Historia": [
         {
@@ -139,6 +248,56 @@ const questionsData = {
             questionText: "¿Qué país fue el primero en enviar un satélite artificial al espacio?",
             options: ["Unión Sovietica", "Japón", "Estados Unidos", "Francia"],
             correctAnswer: "Unión Sovietica"
+        },
+        {
+            questionText: "¿Quién fue el primer emperador de Roma?",
+            options: ["Julio César", "Nerón", "Augusto", "Trajano"],
+            correctAnswer: "Augusto"
+        },
+        {
+            questionText: "¿Qué país fue el primero en enviar un ser humano al espacio?",
+            options: ["Estados Unidos", "Alemania", "China", "Unión Soviética"],
+            correctAnswer: "Unión Soviética"
+        },
+        {
+            questionText: "¿Qué revolución comenzó en 1789?",
+            options: ["Revolución Industrial", "Revolución Rusa", "Revolución Francesa", "Revolución Mexicana"],
+            correctAnswer: "Revolución Francesa"
+        },
+        {
+            questionText: "¿En qué año comenzó la Primera Guerra Mundial?",
+            options: ["1912", "1914", "1916", "1918"],
+            correctAnswer: "1914"
+        },
+        {
+            questionText: "¿Quién fue el líder del movimiento de independencia de la India?",
+            options: ["Nelson Mandela", "Mahatma Gandhi", "Martin Luther King Jr", "Jawaharlal Nehru"],
+            correctAnswer: "Mahatma Gandhi"
+        },
+        {
+            questionText: "¿En qué ciudad ocurrió el famoso desembarco aliado conocido como el Día D?",
+            options: ["Marsella", "Dunkerque", "Normandía", "Rotterdam"],
+            correctAnswer: "Normandía"
+        },
+        {
+            questionText: "¿Qué faraón egipcio fue enterrado en la tumba que Howard Carter descubrió en 1922?",
+            options: ["Ramsés II", "Tutankamón", "Cleopatra", "Akhenatón"],
+            correctAnswer: "Tutankamón"
+        },
+        {
+            questionText: "¿Qué país lanzó la primera bomba atómica en combate?",
+            options: ["Rusia", "Alemania", "Estados Unidos", "Japón"],
+            correctAnswer: "Estados Unidos"
+        },
+        {
+            questionText: "¿En qué año comenzó la Segunda Guerra Mundial?",
+            options: ["1935", "1939", "1941", "1945"],
+            correctAnswer: "1939"
+        },
+        {
+            questionText: "¿Quién descubrió la penicilina?",
+            options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"],
+            correctAnswer: "Alexander Fleming"
         },
     ],
     "Geografía": [
@@ -196,8 +355,59 @@ const questionsData = {
             questionText: "¿Cuál es el único continente sin desierto?",
             options: ["América", "Asia", "Oceanía", "Europa"],
             correctAnswer: "Europa"
+        },
+        {
+            questionText: "¿Cuál es el desierto más grande del mundo?", 
+            options: ["Desierto del Sahara", "Desierto de Gobi", "Desierto de Kalahari", "Antártida"], 
+            correctAnswer: "Antártida"
+        },
+        {
+            questionText: "¿En qué continente se encuentra el río Danubio?", 
+            options: ["África", "Europa", "Asia", "América"], 
+            correctAnswer: "Europa"
+        },
+        {
+            questionText: "¿Cuál es la montaña más alta del mundo?", 
+            options: ["K2", "Kilimanjaro", "Monte Everest", "Aconcagua"], 
+            correctAnswer: "Monte Everest"
+        },
+        {
+            questionText: "¿Qué país tiene la mayor cantidad de habitantes?", 
+            options: ["India", "Estados Unidos", "China", "Rusia"], 
+            correctAnswer: "China"
+        },
+        {
+            questionText: "¿Cuál es el país más pequeño del mundo?", 
+            options: ["Mónaco", "San Marino", "Ciudad del Vaticano", "Liechtenstein"], 
+            correctAnswer: "Ciudad del Vaticano"
+        },
+        {
+            questionText: "¿En qué país se encuentra la Torre de Pisa?", 
+            options: ["España", "Grecia", "Francia", "Italia"], 
+            correctAnswer: "Italia"
+        },
+        {
+            questionText: "¿Qué océano baña las costas del oeste de América del Sur?", 
+            options: ["Océano Atlántico", "Océano Pacífico", "Océano Índico", "Océano Ártico"], 
+            correctAnswer: "Océano Pacífico"
+        },
+        {
+            questionText: "¿En qué país se encuentra la Torre Eiffel?", 
+            options: ["Italia", "España", "Francia", "Reino Unido"], 
+            correctAnswer: "Francia"
+        },
+        {
+            questionText: "¿Cuál es la montaña más alta de África?", 
+            options: ["Monte Everest", "Monte Kilimanjaro", "Monte McKinley", "Monte Aconcagua"], 
+            correctAnswer: "Monte Kilimanjaro"
+        },
+        {
+            questionText: "¿Cuál es la capital de Tailandia?", 
+            options: ["Hanoi", "Bangkok", "Phnom Penh", "Yangón"], 
+            correctAnswer: "Bangkok"
         }
         
+        /*aquí hay 21 preguntas*/ 
     ],
     "Entretenimiento": [
         {
