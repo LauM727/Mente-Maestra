@@ -784,7 +784,7 @@ const questionsData = {
             correctAnswer: "Lo logramos"
         },
         {
-            questionText: "Bailen sin música durante 20 segundos.",
+            questionText: "Bailen sin música durante 30 segundos.",
             options: ["Lo logramos", "No logramos"],
             correctAnswer: "Lo logramos"
         },
@@ -803,6 +803,116 @@ const questionsData = {
             options: ["Lo logramos", "No logramos"],
             correctAnswer: "Lo logramos"
         },
+        {
+            questionText: "Todos deben sostener una sola pierna levantada por 30 segundos sin caerse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Intenten hacer reír a una persona del grupo sin usar palabras en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Canten el coro de una canción popular juntos y sin equivocarse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Logren que al menos tres personas del grupo hagan un trabalenguas sin equivocarse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben hacer una sentadilla al mismo tiempo y sostenerla durante 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Digan el nombre de cinco películas en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben saltar en un pie por 30 segundos sin detenerse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Consigan que todos los miembros del grupo toquen el mismo objeto en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Logren que todos se den un abrazo grupal en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Encuentren un objeto rojo en la habitación en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben girar sobre sí mismos 5 veces sin perder el equilibrio.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Hagan una línea de manos unidas y pasen un objeto de un extremo al otro sin soltar las manos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben hacer el mayor número de saltos de tijera que puedan en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "En 30 segundos, todos deben tocarse la punta de los pies sin doblar las rodillas.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Intenten quedarse en silencio absoluto durante 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben dar 10 vueltas en su propio eje durante 30 segundos sin caerse.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Intenten hacer una ola humana sin detenerse durante 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Intenten formar un círculo con todos los miembros del grupo sin romperse en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Todos deben saltar en el lugar con ambas piernas al mismo tiempo durante 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Logren que todos los miembros del grupo se agarren de las manos en menos de 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Formen una fila y caminen hacia adelante y hacia atrás en 30 segundos sin perder el paso.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        },
+        {
+            questionText: "Intenten decir el nombre de todos los miembros del grupo en orden de edad sin equivocarse en 30 segundos.",
+            options: ["Lo logramos", "No logramos"],
+            correctAnswer: "Lo logramos"
+        }        
     ]
 };
 
