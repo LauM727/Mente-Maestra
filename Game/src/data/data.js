@@ -100,6 +100,56 @@ const questionsData = {
             options: ["Termómetro", "Barómetro", "Telescopio", "Sismógrafo"],
             correctAnswer: "Sismógrafo"
         },
+        {
+            questionText: "¿Quién pintó el techo de la Capilla Sixtina?", 
+            options: ["Leonardo da Vinci", "Miguel Ángel", "Rafael", "Caravaggio"], 
+            correctAnswer: "Miguel Ángel" 
+        },
+        {
+            questionText: "¿Cuál es el país de origen de la pizza?", 
+            options: ["Grecia", "Italia", "Francia", "Estados Unidos"], 
+            correctAnswer: "Italia" 
+        },
+        {
+            questionText: "¿Qué planeta es conocido como el 'planeta rojo'?", 
+            options: ["Venus", "Marte", "Júpiter", "Saturno"], 
+            correctAnswer: "Marte" 
+        },
+        {
+            questionText: "¿Quién inventó el teléfono?", 
+            options: ["Alexander Graham Bell", "Nikola Tesla", "Thomas Edison", "Isaac Newton"], 
+            correctAnswer: "Alexander Graham Bell" 
+        },
+        {
+            questionText: "¿En qué continente se encuentra Egipto?", 
+            options: ["Asia", "África", "Europa", "Oceanía"], 
+            correctAnswer: "África" 
+        },
+        {
+            questionText: "¿Cuál es el planeta más grande del sistema solar?", 
+            options: ["Tierra", "Júpiter", "Saturno", "Neptuno"], 
+            correctAnswer: "Júpiter" 
+        },
+        {
+            questionText: "¿Cuál es el elemento químico más ligero?", 
+            options: ["Oxígeno", "Hidrógeno", "Helio", "Nitrógeno"], 
+            correctAnswer: "Hidrógeno" 
+        },
+        {
+            questionText: "¿Cuál es la ciudad conocida como la 'Gran Manzana'?", 
+            options: ["Los Ángeles", "Chicago", "Nueva York", "Miami"], 
+            correctAnswer: "Nueva York" 
+        },
+        {
+            questionText: "¿Quién escribió la obra 'Hamlet'?", 
+            options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "J.R.R. Tolkien"], 
+            correctAnswer: "William Shakespeare" 
+        },
+        {
+            questionText: "F", 
+            options: ["Sevilla", "Madrid", "Barcelona", "Murcia"], 
+            correctAnswer: "Barcelona" 
+        }
     ],
     "Deporte": [
         {
@@ -202,6 +252,57 @@ const questionsData = {
             options: ["China", "Japón", "Corea del Sur", "Francia"],
             correctAnswer: "China"
         },
+        {
+            questionText: "¿Qué deporte se practica en el torneo 'Wimbledon'?", 
+            options: ["Golf", "Tenis", "Rugby", "Cricket"], 
+            correctAnswer: "Tenis"
+        },
+        {
+            questionText: "¿Cuál es la longitud de una piscina olímpica?", 
+            options: ["25 metros", "50 metros", "100 metros", "200 metros"], 
+            correctAnswer: "50 metros"
+        },
+        {
+            questionText: "¿En qué deporte se utiliza el término 'birdie'?", 
+            options: ["Golf", "Bádminton", "Tenis", "Críquet"], 
+            correctAnswer: "Golf" 
+        },
+        {
+            questionText: "¿Qué país ganó la Copa Mundial de Rugby en 2019?", 
+            options: ["Inglaterra", "Sudáfrica", "Australia", "Nueva Zelanda"], 
+            correctAnswer: "Sudáfrica" 
+        },
+        {
+            questionText: "¿Cuántos sets se juegan en un partido de voleibol?", 
+            options: ["3", "5", "7", "9"], 
+            correctAnswer: "5" 
+        },
+        {
+            questionText: "¿En qué deporte se compite por la Stanley Cup?", 
+            options: ["Fútbol", "Béisbol", "Hockey sobre hielo", "Baloncesto"], 
+            correctAnswer: "Hockey sobre hielo" 
+        },
+        {
+            questionText: "¿Cuál es el evento deportivo más visto del mundo?", 
+            options: ["Super Bowl", "Final de la Copa Mundial de Fútbol", "Juegos Olímpicos", "Tour de Francia"], 
+            correctAnswer: "Final de la Copa Mundial de Fútbol" 
+        },
+        {
+            questionText: "¿Qué deporte se juega en el Torneo de las Seis Naciones?", 
+            options: ["Fútbol", "Rugby", "Críquet", "Tenis"], 
+            correctAnswer: "Rugby" 
+        },
+        {
+            questionText: "¿Cuántos minutos dura un partido de fútbol profesional?", 
+            options: ["60 minutos", "75 minutos", "90 minutos", "120 minutos"], 
+            correctAnswer: "90 minutos" 
+        },
+        {
+            questionText: "¿En qué deporte se utilizan aros, mazas y cintas?", 
+            options: ["Gimnasia rítmica", "Patinaje artístico", "Natación sincronizada", "Atletismo"], 
+            correctAnswer: "Gimnasia rítmica" 
+        }
+             
     ],
     "Historia": [
         {
@@ -352,11 +453,6 @@ const questionsData = {
             correctAnswer: "Europa"
         },
         {
-            questionText: "¿Cuál es el único continente sin desierto?",
-            options: ["América", "Asia", "Oceanía", "Europa"],
-            correctAnswer: "Europa"
-        },
-        {
             questionText: "¿Cuál es el desierto más grande del mundo?", 
             options: ["Desierto del Sahara", "Desierto de Gobi", "Desierto de Kalahari", "Antártida"], 
             correctAnswer: "Antártida"
@@ -406,8 +502,7 @@ const questionsData = {
             options: ["Hanoi", "Bangkok", "Phnom Penh", "Yangón"], 
             correctAnswer: "Bangkok"
         }
-        
-        /*aquí hay 21 preguntas*/ 
+         
     ],
     "Entretenimiento": [
         {
@@ -460,6 +555,56 @@ const questionsData = {
             options: ["Timón", "Mufasa", "Pumba", "Rafiki"],
             correctAnswer: "Rafiki"
         },
+        {
+            questionText: "¿Cuál es la película más taquillera de la historia?", 
+            options: ["Titanic", "Vengadores: Endgame", "Avatar", "Star Wars: El despertar de la fuerza"], 
+            correctAnswer: "Avatar"
+        },
+        {
+            questionText: "¿Quién es el creador de la serie 'Game of Thrones'?", 
+            options: ["J.K. Rowling", "George R.R. Martin", "J.R.R. Tolkien", "Stephen King"], 
+            correctAnswer: "George R.R. Martin"
+        },
+        {
+            questionText: "¿Cuál es el nombre real del personaje de Iron Man en el universo Marvel?", 
+            options: ["Steve Rogers", "Bruce Banner", "Tony Stark", "Peter Parker"], 
+            correctAnswer: "Tony Stark"
+        },
+        {
+            questionText: "¿Qué película ganó el Oscar a Mejor Película en 2020?", 
+            options: ["1917", "Parásitos", "Joker", "Érase una vez en Hollywood"], 
+            correctAnswer: "Parásitos"
+        },
+        {
+            questionText: "¿Quién es el creador de la saga de videojuegos 'The Legend of Zelda'?", 
+            options: ["Shigeru Miyamoto", "Hideo Kojima", "Satoru Iwata", "Hideki Kamiya"], 
+            correctAnswer: "Shigeru Miyamoto"
+        },
+        {
+            questionText: "¿Qué serie animada tiene personajes como Homero, Bart y Lisa?", 
+            options: ["South Park", "Family Guy", "Los Simpson", "Futurama"], 
+            correctAnswer: "Los Simpson"
+        },
+        {
+            questionText: "¿Qué banda lanzó la canción 'Bohemian Rhapsody'?", 
+            options: ["Led Zeppelin", "Queen", "The Beatles", "The Who"], 
+            correctAnswer: "Queen"
+        },
+        {
+            questionText: "¿Quién interpreta a Eleven en la serie 'Stranger Things'?", 
+            options: ["Sadie Sink", "Millie Bobby Brown", "Natalia Dyer", "Gaten Matarazzo"], 
+            correctAnswer: "Millie Bobby Brown"
+        },
+        {
+            questionText: "¿Cuál es el nombre del hobbit interpretado por Elijah Wood en 'El Señor de los Anillos'?", 
+            options: ["Bilbo", "Frodo", "Sam", "Pippin"], 
+            correctAnswer: "Frodo"
+        },
+        {
+            questionText: "¿En qué año se lanzó la primera película de 'Toy Story'?", 
+            options: ["1990", "1995", "2000", "2005"], 
+            correctAnswer: "1995"
+        }
     ],
     "Retos": [
         {
