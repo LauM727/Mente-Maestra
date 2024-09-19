@@ -400,6 +400,62 @@ const questionsData = {
             options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"],
             correctAnswer: "Alexander Fleming"
         },
+        {
+            questionText: "¿Quién fue el primer ministro británico durante la Segunda Guerra Mundial?", 
+            options: ["Winston Churchill", "Neville Chamberlain", "Margaret Thatcher", "David Lloyd George"], 
+            correctAnswer: "Winston Churchill" 
+        },
+        {
+            questionText: "¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?", 
+            options: ["1776", "1783", "1801", "1812"], 
+            correctAnswer: "1776" 
+        },
+        {
+            questionText: "¿Cuál fue la civilización que construyó las pirámides de Giza?", 
+            options: ["Aztecas", "Mayas", "Egipcios", "Incas"], 
+            correctAnswer: "Egipcios" 
+        },
+        {
+            questionText: "¿En qué país tuvo lugar la Revolución Industrial?", 
+            options: ["Francia", "Alemania", "Reino Unido", "Estados Unidos"], 
+            correctAnswer: "Reino Unido" 
+        },
+        {
+            questionText: "¿Qué explorador portugués fue el primero en circunnavegar el globo?", 
+            options: ["Cristóbal Colón", "Ferdinand Magellan", "Bartolomé Díaz", "Vasco da Gama"], 
+            correctAnswer: "Ferdinand Magellan" 
+        },
+        {
+            questionText: "¿Quién fue el líder del Imperio Mongol en el siglo XIII?", 
+            options: ["Kublai Khan", "Atila", "Gengis Khan", "Temur"], 
+            correctAnswer: "Gengis Khan" 
+        },
+        {
+            questionText: "¿En qué año se inició la Revolución Mexicana?", 
+            options: ["1810", "1910", "1920", "1821"], 
+            correctAnswer: "1910" 
+        },
+        {
+            questionText: "¿Qué rey inglés tuvo seis esposas?", 
+            options: ["Enrique VII", "Enrique VIII", "Eduardo VI", "Jorge III"], 
+            correctAnswer: "Enrique VIII" 
+        },
+        {
+            questionText: "¿Cuál fue el conflicto bélico más largo de la historia?", 
+            options: ["Guerra de los Cien Años", "Guerra de Vietnam", "Guerra de las Dos Rosas", "Guerra Fría"], 
+            correctAnswer: "Guerra de los Cien Años" 
+        },
+        {
+            questionText: "¿Qué ciudad fue destruida por el volcán Vesubio en el año 79 d.C.?", 
+            options: ["Roma", "Nápoles", "Pompeya", "Hércules"], 
+            correctAnswer: "Pompeya" 
+        },
+        {
+            questionText: "¿Quién fue el último zar de Rusia?", 
+            options: ["Pedro el Grande", "Iván el Terrible", "Nicolás II", "Alejandro III"], 
+            correctAnswer: "Nicolás II" 
+        }
+             
     ],
     "Geografía": [
         {
@@ -501,8 +557,57 @@ const questionsData = {
             questionText: "¿Cuál es la capital de Tailandia?", 
             options: ["Hanoi", "Bangkok", "Phnom Penh", "Yangón"], 
             correctAnswer: "Bangkok"
-        }
-         
+        },
+        {
+            questionText: "¿En qué continente se encuentra la cordillera de los Andes?",
+            options: ["Asia", "África", "América del Sur", "Europa"],
+            correctAnswer: "América del Sur"
+        },
+        {
+            questionText: "¿Cuál es el país más largo del mundo de norte a sur?",
+            options: ["Argentina", "Chile", "Brasil", "México"],
+            correctAnswer: "Chile"
+        },
+        {
+            questionText: "¿Cuál es la capital de Japón?",
+            options: ["Osaka", "Kyoto", "Tokio", "Hiroshima"],
+            correctAnswer: "Tokio"
+        },
+        {
+            questionText: "¿Cuál es el país más montañoso del mundo?",
+            options: ["Nepal", "Suiza", "Noruega", "Perú"],
+            correctAnswer: "Nepal"
+        },
+        {
+            questionText: "¿En qué país se encuentra el famoso glaciar Perito Moreno?",
+            options: ["Chile", "Argentina", "Canadá", "Islandia"],
+            correctAnswer: "Argentina"
+        },
+        {
+            questionText: "¿Cuál es el único continente donde no hay mamíferos nativos?",
+            options: ["África", "Antártida", "Oceanía", "Europa"],
+            correctAnswer: "Antártida"
+        },
+        {
+            questionText: "¿En qué país se encuentra la ciudad de Marrakech?",
+            options: ["Egipto", "Túnez", "Marruecos", "Argelia"],
+            correctAnswer: "Marruecos"
+        },
+        {
+            questionText: "¿Cuál es el lago más grande del mundo en términos de superficie?",
+            options: ["Lago Superior", "Lago Victoria", "Mar Caspio", "Lago Baikal"],
+            correctAnswer: "Mar Caspio"
+        },
+        {
+            questionText: "¿Cuál es el país insular más grande del mundo?",
+            options: ["Groenlandia", "Australia", "Madagascar", "Islandia"],
+            correctAnswer: "Australia"
+        },
+        {
+            questionText: "¿En qué país se encuentra el Mar Muerto?",
+            options: ["Egipto", "Israel", "Jordania", "Líbano"],
+            correctAnswer: "Israel"
+        }         
     ],
     "Entretenimiento": [
         {
@@ -604,7 +709,58 @@ const questionsData = {
             questionText: "¿En qué año se lanzó la primera película de 'Toy Story'?", 
             options: ["1990", "1995", "2000", "2005"], 
             correctAnswer: "1995"
+        },
+        {
+            questionText: "¿Qué director es conocido por la trilogía de 'El Señor de los Anillos'?",
+            options: ["Steven Spielberg", "Christopher Nolan", "Peter Jackson", "James Cameron"],
+            correctAnswer: "Peter Jackson"
+        },
+        {
+            questionText: "¿Qué actriz protagonizó la película 'La La Land' junto a Ryan Gosling?",
+            options: ["Emma Watson", "Jennifer Lawrence", "Emma Stone", "Scarlett Johansson"],
+            correctAnswer: "Emma Stone"
+        },
+        {
+            questionText: "¿Qué banda sonora famosa fue compuesta por John Williams?",
+            options: ["Jurassic Park", "Titanic", "Inception", "Avatar"],
+            correctAnswer: "Jurassic Park"
+        },
+        {
+            questionText: "¿Cuál es el nombre del personaje principal en la película 'Gladiador'?",
+            options: ["Leonidas", "Maximus", "Achilles", "Hannibal"],
+            correctAnswer: "Maximus"
+        },
+        {
+            questionText: "¿Qué personaje de cómic es conocido como el 'Hombre Murciélago'?",
+            options: ["Superman", "Batman", "Spiderman", "Wolverine"],
+            correctAnswer: "Batman"
+        },
+        {
+            questionText: "¿En qué película animada aparece el personaje de Buzz Lightyear?",
+            options: ["Shrek", "Toy Story", "Monsters Inc.", "Cars"],
+            correctAnswer: "Toy Story"
+        },
+        {
+            questionText: "¿Quién es el creador de la serie animada 'Los Simpsons'?",
+            options: ["Seth MacFarlane", "Trey Parker", "Matt Groening", "Mike Judge"],
+            correctAnswer: "Matt Groening"
+        },
+        {
+            questionText: "¿Qué cantante lanzó el álbum 'Thriller' en 1982?",
+            options: ["Prince", "Michael Jackson", "David Bowie", "Elton John"],
+            correctAnswer: "Michael Jackson"
+        },
+        {
+            questionText: "¿Qué actor protagoniza la película 'Deadpool'?",
+            options: ["Ryan Gosling", "Chris Hemsworth", "Ryan Reynolds", "Hugh Jackman"],
+            correctAnswer: "Ryan Reynolds"
+        },
+        {
+            questionText: "¿Qué película animada fue la primera en ganar un Oscar a Mejor Película Animada?",
+            options: ["Blancanieves", "El Rey León", "Shrek", "Frozen"],
+            correctAnswer: "Shrek"
         }
+        
     ],
     "Retos": [
         {
